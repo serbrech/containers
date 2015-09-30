@@ -1,0 +1,9 @@
+solr:
+    image: makuk66/docker-solr
+    ports: 
+        - "8983:8983"
+curl-solr:
+    links:
+        - solr
+    image: microsoft/aspnet
+    command: curl http://solr:8983
