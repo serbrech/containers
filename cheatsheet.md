@@ -1,4 +1,20 @@
-# Some helpers
+
+# General demo cheatsheet
+
+## docker-machine
+
+
+## docker
+
+
+## docker-compose
+
+
+## docker-swarm
+
+[docker-swarm cheatsheet](docker-swarm/cheatsheet.md)
+
+## Some helpers
 
 ## Remove all dead containers
 docker rm $(docker ps -a -q)
