@@ -6,10 +6,10 @@ using Microsoft.AspNet.Mvc;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace MyNamespace
+namespace HelloWebApi.Controllers
 {
     [Route("api/[controller]")]
-    public class JokeController.cs : Controller
+    public class JokeController : Controller
     {
         // GET: api/values
         [HttpGet]
@@ -17,6 +17,6 @@ namespace MyNamespace
         {
             return "Hello From Docker!";
         }
-
+        
     }
 }
