@@ -12,13 +12,14 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/webstep.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/font/fontawesome/css/font-awesome.min.css" id="fontawesome">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -40,20 +41,33 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section data-markdown>
-					## A lap around containers
-					### Should I care?
+				<section data-markdown data-state="frontpage">
+					# A lap around containers
+					### Understand why you should care
+				</section>
+				<section>
+					<i class="fa fa-2x fa-paw"></i>
+					<div class="pull-left">
+						<h4>Stéphane Erbrech</h4>
+						<p><i class="fa fa-twitter"></i> @serbrech</p>
+					</div>
+					<div class="pull-right">
+						<h4>David Lindblad</h4>
+						<p><i class="fa fa-twitter"></i> @davidlindblad</p>
+					</div>
 				</section>
 				
-				<section data-markdown>
-					# Agenda
+				<section>
 					
-					- Containers
-					- Docker
-					- Tools
-					- Clusters
-					- Further
-					- So?
+					<h1><i class="fa fa-map"></i>&nbsp;&nbsp;Agenda</h1>
+					<ul>
+						<li>Containers</li>
+						<li>Docker</li>
+						<li>Tools</li>
+						<li>Clusters</li>
+						<li>Further</li>
+						<li>So?</li>
+					</ul>
 				</section>
 				
 				<section>
@@ -72,6 +86,7 @@
 					Apcera, AT&T, **AWS**, **Cisco**, ClusterHQ, CoreOS, Datera, **Docker**, EMC, Fujitsu, **Google**, Goldman Sachs, HP, **Huawei**, **IBM**, **Intel**, Joyent, Kismatic, Kyup, the Linux Foundation, Mesosphere, **Microsoft**, Midokura, Nutanix, **Oracle**, Pivotal, Polyverse, Rancher, Red Hat, Resin.io, Suse, Sysdig, Twitter, **Verizon**, **VMWare**
 				</section>
 				<section data-transition="slide-in fade-out">
+					<i class="pull-left fa fa-3x fa-quote-left"></i>
 					<blockquote>
 						<p>
 							<span>The goal of a Standard Container is to encapsulate a software component and all its dependencies </span>
@@ -82,6 +97,7 @@
 					</blockquote>
 				</section>
 				<section data-transition="fade-in fade-out">
+					<i class="pull-left fa fa-3x fa-quote-left"></i>
 					 <blockquote>
 						<p>
 							<span>The goal of a Standard Container is to encapsulate a software component and all its dependencies </span>
@@ -92,6 +108,7 @@
 					</blockquote>
 				</section>
 				<section data-transition="fade-in fade-out">
+					<i class="pull-left fa fa-3x fa-quote-left"></i>
 					<blockquote>
 						<p>
 							<span class="soft">The goal of a Standard Container is to encapsulate a software component and all its dependencies </span>
@@ -102,6 +119,7 @@
 					</blockquote>
 				</section>
 				<section data-transition="fade-in fade-out">
+					<i class="pull-left fa fa-3x fa-quote-left"></i>
 					<blockquote>
 						<p>
 							<span class="soft">The goal of a Standard Container is to encapsulate a software component and all its dependencies </span>
@@ -111,7 +129,8 @@
 						</p>
 					</blockquote>
 				</section>
-				<section data-transition="fade-in">
+				<section data-transition="fade-in slide-out">
+					<i class="pull-left fa fa-3x fa-quote-left"></i>
 					<blockquote>
 						<p>
 							<span class="soft">The goal of a Standard Container is to encapsulate a software component and all its dependencies </span>
@@ -120,6 +139,11 @@
 							<span>regardless of the underlying machine and the contents of the container.</span>
 						</p>
 					</blockquote>	
+				</section>
+				<section data-transition="slide-in">
+					<h2>LibContainer</h2>
+					<h2>RunC</h2>
+					<p><a href='https://github.com/opencontainers/runc'>https://github.com/opencontainers/runc</a></p>
 				</section>
 				
 			</div>
