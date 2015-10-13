@@ -1,0 +1,19 @@
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+// Set colors
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+$accentColor : orange;
+
+@import "../template/webstep-base";
+
