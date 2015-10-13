@@ -19,9 +19,9 @@ docker run -it windowsservercore cmd
 Once the container started up, run `echo %computername%` again. You should notice it's different from your container hosts name.
 
 #### Build a windows container
-The goal here is to build a container that will enable the IIS feature and copy a simple html file to our web directory.
+The goal here is to build a container that will enable the IIS feature and copy a simple html file to our web directory. If you're still inside your container from the previous example, run `exit` now.
 
-Create a new file using: `new-item -Type File c:\build\Web\source\index.html` and add the following html to it:
+Back on the Container host, create a new file using: `new-item -Type File c:\build\Web\source\index.html` and add the following html to it:
 ```
 <!DOCTYPE html>
 <html>
