@@ -48,18 +48,18 @@
 				<section>
 					<i class="fa fa-2x fa-paw"></i>
 					<div class="pull-left">
-						<h4>Stéphane Erbrech</h4>
+						<h3>Stéphane Erbrech</h4>
 						<p><i class="fa fa-twitter"></i> @serbrech</p>
 					</div>
 					<div class="pull-right">
-						<h4>David Lindblad</h4>
+						<h3>David Lindblad</h4>
 						<p><i class="fa fa-twitter"></i> @davidlindblad</p>
 					</div>
 				</section>
 				
 				<section>
 					
-					<h1><i class="fa fa-map"></i>&nbsp;&nbsp;Agenda</h1>
+					<h2><i class="fa fa-map"></i>&nbsp;&nbsp;Agenda</h2>
 					<ul>
 						<li>Containers</li>
 						<li>Docker</li>
@@ -79,8 +79,8 @@
 				</section>
 				
 				<section data-markdown>
-					# Containers
-					## [www.opencontainers.org](https://www.opencontainers.org)
+					## Containers
+					### [www.opencontainers.org](https://www.opencontainers.org)
 				</section>
 				<section data-markdown>
 					Apcera, AT&T, **AWS**, **Cisco**, ClusterHQ, CoreOS, Datera, **Docker**, EMC, Fujitsu, **Google**, Goldman Sachs, HP, **Huawei**, **IBM**, **Intel**, Joyent, Kismatic, Kyup, the Linux Foundation, Mesosphere, **Microsoft**, Midokura, Nutanix, **Oracle**, Pivotal, Polyverse, Rancher, Red Hat, Resin.io, Suse, Sysdig, Twitter, **Verizon**, **VMWare**
@@ -140,14 +140,50 @@
 						</p>
 					</blockquote>	
 				</section>
-				<section data-transition="slide-in">
+				<section data-transition="slide-in slide-out">
 					<h2>LibContainer</h2>
 					<h2>RunC</h2>
 					<p><a href='https://github.com/opencontainers/runc'>https://github.com/opencontainers/runc</a></p>
 				</section>
-				
+				<section data-transition="slide-in slide-out">
+					<h2>Agnostic definition of what is a container</h2>
+					<h2>Implemented by Docker, and donated to the OCI</h2>
+					<p><a href='https://github.com/opencontainers/runc'>https://github.com/opencontainers/runc</a></p>
+				</section>
+				<section data-transition="slide-in">
+					<section data-background='#EEE' class="linux">
+						<h1>Builds on <i class='fa fa-3x fa-linux'></i></h1>
+					</section>
+					<section>
+						<h2><strong>{ }</strong> Namespaces</h2>
+						<ul>
+							<li>PID : process id</li>
+							<li>NET : Network interfaces</li>
+							<li>IPC : Inter process communication</li>
+							<li>MNT : Mount points</li>
+							<li>UTS : Used for isolating kernel and version identifiers. (UTS: Unix Timesharing System)</li>
+						</ul>
+					</section>
+					<section>
+						<h2><i class="fa fa-folder-open"></i> Union FileSystem (UnionFS)</h2>
+					</section>
+					<section>
+						<h2><i class="fa fa-share-alt"></i> Control Groups (cgroups)</h2>
+						<p>Enables share-available hardware resources to containers.</p>
+					</section>
+				</section>
+				<section>
+					<h1>demos<br/><i class="fa fa-4x fa-gamepad"></i></h1>
+				</section>
+				<section>
+					<ul>
+						<li>docker-machine</li>
+						<li>docker</li>
+						<li>docker-compose</li>
+						<li>docker-swarm</li>
+					</ul>
+				</section>
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
