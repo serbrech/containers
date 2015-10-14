@@ -49,6 +49,10 @@
 		font-family: Georgia, "Times New Roman", Times, serif !important;
 		color: #000;
 	}
+	
+	aside{
+		display:none;
+	}	
 
 	/* SECTION 4: Set heading font face, sizes, and color.
 	   Differentiate your headings from your body text.

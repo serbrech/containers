@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Containers - Why you should care</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -43,7 +43,10 @@
 			<div class="slides">
 				<section data-markdown data-state="frontpage">
 					# A lap around containers
-					### Understand why you should care
+					### Why should I care?
+					Note:
+					With all the news around it, you probably have heard about Containers
+					But since it's so new, and did no run on Windows until recently...					 
 				</section>
 				<section>
 					<i class="fa fa-2x fa-paw"></i>
@@ -55,32 +58,47 @@
 						<h3>David Lindblad</h4>
 						<p><i class="fa fa-twitter"></i> @davidlindblad</p>
 					</div>
+					<aside class="notes">Webstep, Distributed systems, Devops, Cloud</aside>
 				</section>
 				
 				<section>
 					
 					<h2><i class="fa fa-map"></i>&nbsp;&nbsp;Agenda</h2>
 					<ul>
-						<li>Containers</li>
-						<li>Docker</li>
-						<li>Tools</li>
-						<li>Clusters</li>
-						<li>Further</li>
+						<li>Containers Principles</li>
+						<li>Docker Machine</li>
+						<li>Docker Engine</li>
+						<li>Docker Hub</li>
+						<li>Docker Compose</li>
+						<li>Docker on Windows</li>
+						<li>Docker Swarm</li>
 						<li>So?</li>
 					</ul>
 				</section>
-				
 				<section>
 					<img data-src="images/VM.png">
+					<aside class="notes">
+						machines have the overhead of running a full OS
+					</aside>
 				</section>
 				
-				<section >
+				<section>
 					<img data-src="images/Containers.png">
+					<aside class="notes">
+						containers advantages for the cloud
+						density
+						less resource waste. obvious gain for cloud hosts
+					</aside>
 				</section>
 				
 				<section data-markdown>
 					## Containers
 					### [www.opencontainers.org](https://www.opencontainers.org)
+					Note:
+						All vendors, and stakeholders get together and build a standard. Initiative of Docker inc.
+						We dont want to battle how this is going to be, let's get an agreement
+						Hosted in the Linux Foundation
+						Technology led. Code Wins over argument
 				</section>
 				<section data-markdown>
 					Apcera, AT&T, **AWS**, **Cisco**, ClusterHQ, CoreOS, Datera, **Docker**, EMC, Fujitsu, **Google**, Goldman Sachs, HP, **Huawei**, **IBM**, **Intel**, Joyent, Kismatic, Kyup, the Linux Foundation, Mesosphere, **Microsoft**, Midokura, Nutanix, **Oracle**, Pivotal, Polyverse, Rancher, Red Hat, Resin.io, Suse, Sysdig, Twitter, **Verizon**, **VMWare**
@@ -140,16 +158,6 @@
 						</p>
 					</blockquote>	
 				</section>
-				<section data-transition="slide-in slide-out">
-					<h2>LibContainer</h2>
-					<h2>RunC</h2>
-					<p><a href='https://github.com/opencontainers/runc'>https://github.com/opencontainers/runc</a></p>
-				</section>
-				<section data-transition="slide-in slide-out">
-					<h2>Agnostic definition of what is a container</h2>
-					<h2>Implemented by Docker, and donated to the OCI</h2>
-					<p><a href='https://github.com/opencontainers/runc'>https://github.com/opencontainers/runc</a></p>
-				</section>
 				<section data-transition="slide-in">
 					<section data-background='#EEE' class="linux">
 						<h1>Builds on <i class='fa fa-3x fa-linux'></i></h1>
@@ -172,6 +180,22 @@
 						<p>Enables share-available hardware resources to containers.</p>
 					</section>
 				</section>
+				<section data-transition="slide-in slide-out">
+					<h2>LibContainer</h2>
+					<h3>Agnostic definition of what is a container implemented by docker</h3>
+					<aside class="notes">donated to opencontainers as RunC</aside>
+				</section>
+				<section data-transition="slide-in slide-out">
+					<h2>RunC</h2>
+					<p><a href='https://github.com/opencontainers/runc'>https://github.com/opencontainers/runc</a></p>
+				</section>
+				<section data-background='#FFF'>
+					<img style="border:0;" data-src="images/docker.png"/>
+				</section>
+				<section>
+					<h2>50% plumbing</h2>
+					<h2>Tooling + Workflows</h2>
+				</section>
 				<section>
 					<h1>demos<br/><i class="fa fa-4x fa-gamepad"></i></h1>
 				</section>
@@ -181,7 +205,23 @@
 						<li>docker</li>
 						<li>docker-compose</li>
 						<li>docker-swarm</li>
+						<li>docker on Windows</li>
 					</ul>
+				</section>
+				<section>
+					<h2>More?</h2>
+					<ul>
+						<li>Kitematic</li>
+						<li>Synology</li>
+						<li>Mesosphere</li>
+						<li>Kubernetes</li>
+						<li>Amazon</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Resources</h2>
+					<p>checkout the git repo of this talk!</p>
+					<a href="https://github.com/serbrech/containers">https://github.com/serbrech/containers</a>
 				</section>
 			</div>
 		</div>
@@ -208,10 +248,10 @@
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					//{ src: 'plugin/remotes/remotes.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
-
 		</script>
 
 	</body>

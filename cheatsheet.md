@@ -2,7 +2,11 @@
 # General demo cheatsheet
 
 ## docker-machine
-eval "$(docker-machine env default)"
+
+`eval "$(docker-machine env default)"`
+
+`docker-machine --debug create mynewhost -d virtualbox`
+
 
 
 ## docker

@@ -155,3 +155,7 @@ ul, ol, div, p {
 	z-index: 1;
 }
 
+aside{
+	display:none;
+}
+
