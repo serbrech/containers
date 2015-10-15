@@ -318,5 +318,8 @@ body {
 html.frontpage h3 {
   color: orange; }
 
+reveal section.docker {
+  background-image: "../../../images/docker.png"; }
+
 html {
   background-color: inherit; }

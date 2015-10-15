@@ -54,6 +54,10 @@ html.frontpage h3 {
 	color : $accentColor;
 }
 
+reveal section.docker {
+	background-image : "../../../images/docker.png";
+}
+
 html { 
 	background-color: inherit; 
 }
