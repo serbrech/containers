@@ -1,8 +1,10 @@
 web:
-    image: webstep/docker-web
-    expose: 
-        - "5000"
-curl-it:
+    image: steph/node
+    ports:
+        - "5001"
+balancer:
+    image: tutum/haproxy
     links:
-        - web
-    image: microsoft/aspnet
+      - "web"
+    ports:
+      - "5000:80"
