@@ -14,8 +14,8 @@
 
 ## docker-compose
 
-in the docke-compose folder : 
-this is using the docker web
+in the docker-compose folder : 
+this is using the docker-node image
 
 
 ## docker-swarm
@@ -29,4 +29,3 @@ docker rm $(docker ps -a -q)
 
 #### Remove all unnamed images
 docker rmi -f $(docker images | grep "<none>" | awk "{print \$3}")
- 

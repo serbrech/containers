@@ -46,7 +46,7 @@
 					### Why should I care?
 					Note:
 					With all the news around it, you probably have heard about Containers
-					But since it's so new, and did no run on Windows until recently...					 
+					But since it's so new, and did no run on Windows until recently...
 				</section>
 				<section>
 					<i class="fa fa-2x fa-paw"></i>
@@ -60,9 +60,9 @@
 					</div>
 					<aside class="notes">Webstep, Distributed systems, Devops, Cloud</aside>
 				</section>
-				
+
 				<section>
-					
+
 					<h2><i class="fa fa-map"></i>&nbsp;&nbsp;Agenda</h2>
 					<ul>
 						<li>Containers Principles</li>
@@ -75,22 +75,23 @@
 						<li>So?</li>
 					</ul>
 				</section>
+
 				<section>
-					<img data-src="images/VM.png">
+					<img data-src="images/VM2.png" height='600px'>
 					<aside class="notes">
 						machines have the overhead of running a full OS
 					</aside>
 				</section>
-				
+
 				<section>
-					<img data-src="images/Containers.png">
+					<img data-src="images/Containers2.png">
 					<aside class="notes">
 						containers advantages for the cloud
 						density
 						less resource waste. obvious gain for cloud hosts
 					</aside>
 				</section>
-				
+
 				<section data-markdown>
 					## Containers
 					### [www.opencontainers.org](https://www.opencontainers.org)
@@ -156,28 +157,42 @@
 							<span class="soft">so that any compliant runtime can run it without extra dependencies, </span>
 							<span>regardless of the underlying machine and the contents of the container.</span>
 						</p>
-					</blockquote>	
+					</blockquote>
 				</section>
 				<section data-transition="slide-in">
 					<section data-background='#EEE' class="linux">
 						<h1>Builds on <i class='fa fa-3x fa-linux'></i></h1>
 					</section>
 					<section>
+						<h2><i class="fa fa-share-alt"></i> Control Groups (cgroups)</h2>
+						<p>Controls how the processes share the hardware resources to containers.</p>
+						<p>Limits memory, cpu and IO per process group</p>
+					</section>
+					<section>
 						<h2><strong>{ }</strong> Namespaces</h2>
 						<ul>
-							<li>PID : process id</li>
+							<li>PID : process ids</li>
 							<li>NET : Network interfaces</li>
 							<li>IPC : Inter process communication</li>
 							<li>MNT : Mount points</li>
-							<li>UTS : Used for isolating kernel and version identifiers. (UTS: Unix Timesharing System)</li>
+							<li>UTS : Used for isolating kernel and version identifiers</li>
+							<li>USER : Manage the uid/gid</li>
 						</ul>
+						<aside class="notes">
+							<ul>
+								<li>Provides processes with their own view of the system.</li>
+								<li>ns limits what you can see (and use)</li>
+								<li>pid processes only see other processes in the same pid namespace.</li>
+								<li>net allows to make the container bridged or nat, or isolated from host.. --net.</li>
+								<li>uts getHostname setHostname</li>
+								<li>ipc : shared memory without conflict, message queues..</li>
+								<li>user : map uid/gid to something else in the container</li>
+							</ul>
+						</aside>
 					</section>
+
 					<section>
 						<h2><i class="fa fa-folder-open"></i> Union FileSystem (UnionFS)</h2>
-					</section>
-					<section>
-						<h2><i class="fa fa-share-alt"></i> Control Groups (cgroups)</h2>
-						<p>Enables share-available hardware resources to containers.</p>
 					</section>
 				</section>
 				<section data-transition="slide-in slide-out">
